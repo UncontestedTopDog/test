@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yy.android.myapplicationaaq">
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".bitmap.BitmapActivity"></activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".layout.LayoutActivity" />
+        <activity android:name=".string.StringTestActivity" />
+        <activity android:name=".diff.DiffActivity" />
+        <activity android:name=".mvp.MvpActivity" />
+        <activity android:name=".hook.Hook2Activity" />
+        <activity android:name=".hook.HookActivity" />
+        <activity android:name=".activityresult.SaveActivity" />
+        <activity android:name=".bigmap.LargeImageViewActivity" />
+        <activity android:name=".memory.MemDataActivity" />
+        <activity
+            android:name=".configs.ConfigsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".draw.DrawActivity" />
+        <activity android:name=".jsBridge.JsBridgeActivity" />
+        <activity android:name=".web.WebActivity" />
+        <activity android:name=".blockcanary.BlockCanaryActivity" />
+        <activity android:name=".leakcanary.LeakCanaryActivity" />
+        <activity android:name=".arouter.service.ArouterServiceActivity" />
+        <activity android:name=".viewmodel.ViewModelActivity" />
+        <activity android:name=".lifecycle.LifecycleActivity2" />
+        <activity android:name=".glide.GlideActivity" />
+        <activity android:name=".databinding.DataBindingActivity" />
+        <activity android:name=".thread.ThreadActivity" />
+        <activity android:name=".lifecycle.LifecycleActivity" />
+        <activity android:name=".okhttp.OKHttpActivity" />
+        <activity android:name=".asynctask.AsyncTaskActivity" />
+        <activity android:name=".fragment.ThreeActivity" />
+        <activity android:name=".fragment.TwoActivity" />
+        <activity android:name=".fragment.OneActivity" />
+        <activity android:name=".retrofit.RetrofitActivity" />
+        <activity android:name=".anr.ANRActivity" />
+        <activity android:name=".fragment.FragmentActivity" />
+        <activity android:name=".handler.HandlerActivity" />
+        <activity android:name=".service.ServiceActivity" />
+
+        <service
+            android:name=".service.StartService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.BindService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".FirstActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".memory.MemoryStaticActivity" />
+        <activity android:name=".views.ViewActivity" />
+        <activity android:name=".test.TestActivity" />
+        <activity android:name=".activityresult.SecondActivity" />
+        <activity android:name=".touch.TouchActivity" />
+        <activity
+            android:name=".arouter.ui.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".arouter.ArouterOneActivity" />
+        <activity android:name=".arouter.ArouterTwoActivity" />
+        <activity android:name=".arouter.ArouterThreeActivity" />
+        <activity
+            android:name=".arouter.ArouterFourActivity"
+            android:configChanges="screenSize" />
+
+        <provider
+            android:name=".contentprovider.TestContentProvider"
+            android:authorities="com.yy.android.myapplicationaaq.contentprovider.TestContentProvider"
+            android:exported="false"
+            android:multiprocess="false" />
+    </application>
+
+</manifest>

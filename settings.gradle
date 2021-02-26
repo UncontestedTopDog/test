@@ -1,0 +1,8 @@
+include ':autobulid'
+include ':autobundle'
+include ':base'
+include ':leetcode'
+include ':mylibrary'
+include ':lib'
+include ':app'
+rootProject.name = "My Application"
